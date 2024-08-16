@@ -27,7 +27,7 @@ export function AboutMe() {
         <div className="flex flex-col items-start justify-center space-y-4">
           <div className="space-y-2">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Olá, Eu sou o Higor Giovane</h1>
-            <h2 className="text-2xl font-semibold text-muted-foreground sm:text-3xl">FullStack Developer</h2>
+            <h2 className="text-2xl font-semibold text-muted-foreground sm:text-3xl">Desenvolvedor FullStack</h2>
             <p className="text-muted-foreground md:text-xl">
               Sou um desenvolvedor full stack apaixonado, focado em criar apps e sites que encantam e conectam pessoas. Adoro transformar ideias em soluções impactantes, desde interfaces intuitivas até sistemas robustos e escaláveis.
             </p>
@@ -54,17 +54,16 @@ export function AboutMe() {
             </div>
             <div className="flex items-center gap-2">
               <BriefcaseIcon className="h-5 w-5" />
-              <span>2+ Years Experience</span>
+              <span>2+ Anos de Experiência</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Modal para Currículo */}
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
-        pdfUrl="/pdf/Curriculo_Higor_Giovane_2024.pdf" // Caminho correto para o PDF
+        pdfUrl="/pdf/Curriculo_Higor_Giovane_2024.pdf"
       />
     </section>
   );

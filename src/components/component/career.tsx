@@ -4,9 +4,9 @@ export function Career() {
     <div className="w-full max-w-3xl mx-auto py-12 md:py-16 lg:py-20">
       <div className="space-y-8">
         <div className="space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Career Timeline</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">História da minha carreira</h2>
           <p className="text-muted-foreground max-w-[700px] mx-auto">
-            Explore my professional journey through the years.
+            Visualize a jornada até chegar aqui.
           </p>
         </div>
         <div className="relative pl-6 after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-muted-foreground/20">

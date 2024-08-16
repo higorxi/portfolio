@@ -4,15 +4,18 @@ import { Contact } from "@/components/component/contact";
 import { Footer } from "@/components/component/footer";
 import { Header } from "@/components/component/header";
 import { Project } from "@/components/component/project";
-import { Skills } from "@/components/component/skills";
 import Marquee from "react-fast-marquee";
 
 export default function Home() {
   return (
    <>
     <Header/>
-    <AboutMe/>   
-    <Career/>
+    <section id="inicio">
+      <AboutMe/>
+    </section>
+    <section id="sobre">
+      <Career/>
+    </section>
     <Marquee
       style={{
         background: "#f0f0f0", 
@@ -24,9 +27,14 @@ export default function Home() {
       }}
     >
       Capacitando a inovação por meio de código e criatividade.
+      
     </Marquee>
-    <Project/>
-    <Contact/>
+    <section id="projetos">
+      <Project/>
+    </section>
+    <section id="contato">
+      <Contact/>
+    </section>
     <Footer/>
    </>
   );
