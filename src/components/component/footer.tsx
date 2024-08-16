@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaGithub, FaTwitter } from 'react-icons/fa';
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -7,8 +8,20 @@ export function Footer() {
       <div className="container max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div className="flex flex-col items-start gap-4">
           <Link href="#inicio" className="flex items-center gap-2" prefetch={false}>
-            <MountainIcon className="w-6 h-6 text-yellow-400" />
-            <span className="font-bold text-lg">Portfolio</span>
+            <Image
+              src="/assets/logo/logo_icone_branca.png"
+              alt="Logo Icone Dinossauro"
+              width={75} 
+              height={75} 
+            />
+            <div className="flex flex-col">
+              <span className="font-bold text-lg">
+                Higor Giovane
+              </span>
+              <span className="text-sm text-gray-400">
+                Developer
+              </span>
+            </div>
           </Link>
           <nav className="flex flex-col gap-2">
             <Link href="#inicio" className="text-gray-300 hover:text-white hover:underline transition-colors" prefetch={false}>
@@ -66,7 +79,6 @@ export function Footer() {
   )
 }
 
-
 function InstagramIcon(props: any) {
   return (
     <svg
@@ -108,23 +120,3 @@ function LinkedinIcon(props: any) {
     </svg>
   )
 }
-
-function MountainIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
-  )
-}
-
