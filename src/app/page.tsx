@@ -23,7 +23,7 @@ export default function Home() {
         height: '3.1rem'
       }}
     >
-      "Empowering innovation through code and creativity."
+      Capacitando a inovação por meio de código e criatividade.
     </Marquee>
     <Project/>
     <Contact/>

@@ -21,9 +21,9 @@ export function Career() {
               </div>
               <div className="px-4 pt-4">
                 <div className="text-sm text-muted-foreground">
-                  Responsible for developing and maintaining the company's web application, implementing new features,
-                  and optimizing performance. Collaborated with cross-functional teams to deliver high-quality software
-                  solutions.
+                   Responsável por desenvolver e manter a aplicação web da empresa, implementando novas funcionalidades,
+                  e otimizando o desempenho. Colaborou com equipes multifuncionais para fornecer software de alta qualidade
+                  soluções.
                 </div>
               </div>
             </div>
@@ -37,9 +37,9 @@ export function Career() {
               </div>
               <div className="px-4 pt-4">
                 <div className="text-sm text-muted-foreground">
-                  Developed and maintained the company's web-based application, focusing on the user interface and
-                  implementing responsive design. Collaborated with designers and backend developers to deliver a
-                  seamless user experience.
+                  Desenvolvi e mantive o aplicativo web da empresa, com foco na interface do usuário e
+                  implementação de design responsivo. Colaborou com designers e desenvolvedores back-end para entregar um
+                  experiência de usuário perfeita.
                 </div>
               </div>
             </div>
