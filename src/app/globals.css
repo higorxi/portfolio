@@ -34,6 +34,37 @@
   html {
     scroll-behavior: smooth;
   }
+.page-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #2242B3, #001047);
+  position: relative;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; 
+}
+
+.gradient-background {
+  background: linear-gradient(to bottom, #2242B3, #001047);
+}
+
+.gradient-background-reverse {
+  background: linear-gradient(to bottom, #001047, #2242B3);
+  padding: 2rem 0;
+}
+
+.marquee {
+  background: #2242B3;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px 20px;
+  height: 3.1rem;
+}
 
   .dark {
     --background: 224 71.4% 4.1%;

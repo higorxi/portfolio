@@ -1,74 +1,101 @@
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { FaGithub } from 'react-icons/fa'; 
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { FaGithub, FaWhatsapp } from 'react-icons/fa';
 
 export function Contact() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Entre em contato</h2>
-          <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl lg:text-base xl:text-xl">
-            Tem um projeto em mente ou apenas quer dizer olá? Preencha o formulário abaixo e retornarei o mais breve possível.
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-600">
+            Entre em contato
+          </h2>
+          <p className="max-w-[700px] mx-auto text-white md:text-xl lg:text-base xl:text-xl">
+            Tem um projeto em mente ou apenas quer dizer olá? Preencha o formulário abaixo e retornarei o mais breve
+            possível.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-8">
-          <form className="w-full max-w-md space-y-6">
+          <form className="w-full max-w-md space-y-6 bg-white p-6 rounded-lg shadow-md">
             <div className="grid gap-6">
               <div className="space-y-2">
-                <Label htmlFor="name">Nome</Label>
-                <Input id="name" placeholder="Escreva seu nome" />
+                <Label htmlFor="name" className="text-gray-800">
+                  Nome
+                </Label>
+                <Input
+                  id="name"
+                  placeholder="Escreva seu nome"
+                  className="border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="Escreva seu email" />
+                <Label htmlFor="email" className="text-gray-800">
+                  Email
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="Escreva seu email"
+                  className="border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message">Mensagem</Label>
-                <Textarea id="message" placeholder="Escreva sua mensagem" rows={5} />
+                <Label htmlFor="message" className="text-gray-800">
+                  Mensagem
+                </Label>
+                <Textarea
+                  id="message"
+                  placeholder="Escreva sua mensagem"
+                  rows={5}
+                  className="border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                />
               </div>
             </div>
-            <Button type="submit" className="w-full">
+            <Button
+              type="submit"
+              className="w-full bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            >
               Enviar
             </Button>
           </form>
-          <div className="w-full max-w-md space-y-8">
+          <div className="w-full max-w-md space-y-8 bg-white p-6 rounded-lg shadow-md">
             <div className="space-y-2">
-              <h3 className="text-xl font-bold">Informação De Contato</h3>
-              <div className="space-y-1 text-muted-foreground">
+              <h3 className="text-xl font-bold text-gray-800">Informação De Contato</h3>
+              <div className="space-y-1 text-gray-600">
                 <p>Anápolis, Goiás - BR</p>
                 <p>Telefone: +55 (62) 98519-4415</p>
                 <p>Email: contatohigordev@gmail.com</p>
               </div>
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-bold">Me acompanhe</h3>
+              <h3 className="text-xl font-bold text-gray-800">Me acompanhe</h3>
               <div className="flex justify-left gap-4">
-                <Link href="#" className="text-muted-foreground hover:text-blue-400" prefetch={false}>
+                <Link href="#" className="text-blue-500 hover:text-blue-700" prefetch={false}>
                   <TwitterIcon className="h-6 w-6" />
                   <span className="sr-only">Twitter</span>
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-blue-700" prefetch={false}>
+                <Link href="#" className="text-blue-600 hover:text-blue-800" prefetch={false}>
                   <LinkedinIcon className="h-6 w-6" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-primary" prefetch={false}>
+                <Link href="#" className="text-gray-800 hover:text-gray-600" prefetch={false}>
                   <FaGithub className="h-6 w-6" size={18} />
                   <span className="sr-only">GitHub</span>
                 </Link>
               </div>
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-bold">Fale Comigo</h3>
+              <h3 className="text-xl font-bold text-gray-800">Fale Comigo</h3>
               <a
-                href="https://wa.me/5562985194415?text=Olá, gostaria de mais informações!"
+                href="https://wa.me/5562985194415?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-500 shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
               >
+                <FaWhatsapp className="h-6 w-6 mr-2" size={18} />
                 Falar no WhatsApp
               </a>
             </div>

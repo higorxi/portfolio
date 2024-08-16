@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import TechnologiesModal from "../component/technologiesModal";
+'use client';
+import { useState } from 'react';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import TechnologiesModal from '../component/technologiesModal';
 
 interface Technology {
   name: string;
@@ -14,7 +14,10 @@ interface Technology {
 
 export function Project() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [modalContent, setModalContent] = useState<{ technologies: Technology[], description: string }>({ technologies: [], description: '' });
+  const [modalContent, setModalContent] = useState<{ technologies: Technology[]; description: string }>({
+    technologies: [],
+    description: '',
+  });
 
   const openModal = (technologies: Technology[], description: string) => {
     setModalContent({ technologies, description });
@@ -22,52 +25,59 @@ export function Project() {
   };
 
   const closeModal = () => setIsModalOpen(false);
-
+  
   const projects = [
     {
-      title: "Project Title",
-      description: "A brief description of the project goes here.",
-      imageUrl: "/placeholder.svg",
+      title: 'UCash',
+      description: 'Aplicativo inovador focado especificamente em conversão de crédito.',
+      imageUrl: '../assets/projects/2.png',
       technologies: [
-        { name: "React", description: "A JavaScript library for building user interfaces", icon: "reactjs" },
-        { name: "Next.js", description: "A React framework for production", icon: "nextjs" },
-        { name: "Tailwind CSS", description: "A utility-first CSS framework", icon: "tailwindcss" }
+        { name: 'React Native', description: 'A JavaScript library for building user interfaces', icon: 'reactjs' },
+        { name: 'Expo', description: 'A React framework for production', icon: 'expo' },
+        { name: 'TypeScript', description: 'A React framework for production', icon: 'typescript' },
+        { name: 'Styled Components', description: 'A utility-first CSS framework', icon: 'css' },
+        { name: 'Node.js', description: 'A utility-first CSS framework', icon: 'nodejs' },
+        { name: 'Express', description: 'A utility-first CSS framework', icon: 'express' },
+        { name: 'Azure', description: 'A utility-first CSS framework', icon: 'azure' },
+        { name: 'Docker', description: 'A utility-first CSS framework', icon: 'docker' },
+        { name: 'Figma', description: 'A utility-first CSS framework', icon: 'figma' },
+        { name: 'Git', description: 'A utility-first CSS framework', icon: 'git' },
       ],
-      githubUrl: "#"
+      githubUrl: '#',
     },
     {
-      title: "Another Project",
-      description: "Another brief description of the project goes here.",
-      imageUrl: "/placeholder.svg",
+      title: 'Another Project',
+      description: 'Another brief description of the project goes here.',
+      imageUrl: '/placeholder.svg',
       technologies: [
-        { name: "Node.js", description: "A JavaScript runtime built on Chrome's V8 JavaScript engine", icon: "nodejs" },
-        { name: "Express", description: "A minimal and flexible Node.js web application framework", icon: "express" },
-        { name: "MongoDB", description: "A NoSQL database for modern applications", icon: "mongodb" }
+        { name: 'Node.js', description: "A JavaScript runtime built on Chrome's V8 JavaScript engine", icon: 'nodejs' },
+        { name: 'Express', description: 'A minimal and flexible Node.js web application framework', icon: 'express' },
+        { name: 'MongoDB', description: 'A NoSQL database for modern applications', icon: 'mongodb' },
       ],
-      githubUrl: "#"
+      githubUrl: '#',
     },
     {
-      title: "Third Project",
-      description: "A third brief description of the project goes here.",
-      imageUrl: "/placeholder.svg",
+      title: 'Third Project',
+      description: 'A third brief description of the project goes here.',
+      imageUrl: '/placeholder.svg',
       technologies: [
-        { name: "Flutter", description: "An open-source UI software development toolkit", icon: "flutter" },
-        { name: "Firebase", description: "A platform for creating mobile and web applications", icon: "firebase" }
+        { name: 'Flutter', description: 'An open-source UI software development toolkit', icon: 'flutter' },
+        { name: 'Firebase', description: 'A platform for creating mobile and web applications', icon: 'firebase' },
       ],
-      githubUrl: "#"
-    }
+      githubUrl: '#',
+    },
   ];
 
   return (
     <div className="w-full max-w-6xl mx-auto py-12 md:py-16">
-      <div className="relative p-8 rounded-lg shadow-lg">
-        <div className="absolute inset-0 bg-white bg-opacity-20 backdrop-blur-md rounded-lg" />
+      <div className="relative p-8 rounded-lg border border-gray-400 shadow-lg bg-white bg-opacity-20 backdrop-blur-md">
+        <div className="absolute inset-0 border border-gray-400 rounded-lg" />
         <div className="relative">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white">Projetos</h2>
             <p className="text-white mt-2">Aqui estão alguns dos nossos projetos mais recentes e inovadores.</p>
           </div>
-          
+
           <div className="relative">
             <Carousel className="w-full">
               <CarouselContent>
@@ -80,7 +90,7 @@ export function Project() {
                         width={500}
                         height={300}
                         className="w-full md:w-1/2 h-64 md:h-auto object-cover"
-                        style={{ aspectRatio: "500/300", objectFit: "cover" }}
+                        style={{ aspectRatio: '500/300', objectFit: 'cover' }}
                       />
                       <div className="p-6 md:p-8 flex flex-col gap-4">
                         <div>
@@ -88,7 +98,10 @@ export function Project() {
                           <p className="text-muted-foreground">{project.description}</p>
                         </div>
                         <div className="flex items-center gap-4">
-                          <Button variant="outline" onClick={() => openModal(project.technologies, project.description)}>
+                          <Button
+                            variant="outline"
+                            onClick={() => openModal(project.technologies, project.description)}
+                          >
                             Tecnologias
                           </Button>
                           <Link

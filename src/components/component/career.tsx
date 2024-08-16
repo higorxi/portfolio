@@ -1,61 +1,90 @@
-
 export function Career() {
   return (
-    <div className="w-full max-w-3xl mx-auto py-12 md:py-16 lg:py-20">
+    <div className="w-full max-w-3xl mx-auto py-12 md:py-16 lg:py-28">
       <div className="space-y-8">
         <div className="space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">História da minha carreira</h2>
-          <p className="text-muted-foreground max-w-[700px] mx-auto">
+          <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-[#C79D2A]">
+            História da minha carreira
+          </h2>
+          <p className="text-xl text-white max-w-[700px] mx-auto">
             Visualize a jornada até chegar aqui.
           </p>
         </div>
-        <div className="relative pl-6 after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-muted-foreground/20">
+        <div className="relative pl-12 after:absolute after:inset-y-0 after:left-6 after:w-1 after:bg-gray-300">
+          <div className="absolute left-6 top-0 bottom-0 w-1 bg-gray-300" />
           <div className="space-y-6">
-            <div>
-              <div className="flex items-center justify-between gap-4 px-4 py-3 rounded-md bg-muted/20 hover:bg-muted/30 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+            <div className="relative">
+              <div className="flex items-center justify-between gap-4 px-4 py-4 rounded-lg bg-gray-50 shadow-lg hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
                 <div className="grid gap-1">
-                  <div className="font-medium">Software Engineer</div>
-                  <div className="text-sm text-muted-foreground">Acme Inc.</div>
-                  <div className="text-sm text-muted-foreground">2020 - Present</div>
+                  <div className="font-semibold text-lg text-gray-800">Desenvolvedor FullStack Pleno</div>
+                  <div className="text-sm text-gray-600">UCash LTDA.</div>
+                  <div className="text-sm text-gray-600">07/2024 - Presente</div>
                 </div>
               </div>
-              <div className="px-4 pt-4">
-                <div className="text-sm text-muted-foreground">
-                   Responsável por desenvolver e manter a aplicação web da empresa, implementando novas funcionalidades,
+              <div className="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 w-1 h-full bg-gray-300" />
+              <div className="absolute left-6 top-1/2 w-12 h-0.5 bg-gray-300" />
+              <div className="px-4 pt-2">
+                <div className="text-sm text-gray-600 bg-gray-200 p-4 rounded-lg">
+                  Responsável por desenvolver e manter a aplicação web da empresa, implementando novas funcionalidades,
                   e otimizando o desempenho. Colaborou com equipes multifuncionais para fornecer software de alta qualidade
                   soluções.
                 </div>
               </div>
             </div>
-            <div>
-              <div className="flex items-center justify-between gap-4 px-4 py-3 rounded-md bg-muted/20 hover:bg-muted/30 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+
+            <div className="relative">
+              <div className="flex items-center justify-between gap-4 px-4 py-4 rounded-lg bg-gray-50 shadow-lg hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
                 <div className="grid gap-1">
-                  <div className="font-medium">Frontend Developer</div>
-                  <div className="text-sm text-muted-foreground">Widgets Inc.</div>
-                  <div className="text-sm text-muted-foreground">2018 - 2020</div>
+                  <div className="font-semibold text-lg text-gray-800">Desenvolvedor FullStack Junior</div>
+                  <div className="text-sm text-gray-600">UCash LTDA.</div>
+                  <div className="text-sm text-gray-600">01/2024 - 07/2024</div>
                 </div>
               </div>
-              <div className="px-4 pt-4">
-                <div className="text-sm text-muted-foreground">
+              <div className="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 w-1 h-full bg-gray-300" />
+              <div className="absolute left-6 top-1/2 w-12 h-0.5 bg-gray-300" />
+              <div className="px-4 pt-2">
+                <div className="text-sm text-gray-600 bg-gray-200 p-4 rounded-lg">
+                  Responsável por desenvolver e manter a aplicação web da empresa, implementando novas funcionalidades,
+                  e otimizando o desempenho. Colaborou com equipes multifuncionais para fornecer software de alta qualidade
+                  soluções.
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="flex items-center justify-between gap-4 px-4 py-4 rounded-lg bg-gray-50 shadow-lg hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
+                <div className="grid gap-1">
+                  <div className="font-semibold text-lg text-gray-800">Desenvolvedor Front-end</div>
+                  <div className="text-sm text-gray-600">FTT - Fabrica de Tecnologias Turing.</div>
+                  <div className="text-sm text-gray-600">06/2023 - 01/2024</div>
+                </div>
+              </div>
+              <div className="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 w-1 h-full bg-gray-300" />
+              <div className="absolute left-6 top-1/2 w-12 h-0.5 bg-gray-300" />
+              <div className="px-4 pt-2">
+                <div className="text-sm text-gray-600 bg-gray-200 p-4 rounded-lg">
                   Desenvolvi e mantive o aplicativo web da empresa, com foco na interface do usuário e
                   implementação de design responsivo. Colaborou com designers e desenvolvedores back-end para entregar um
                   experiência de usuário perfeita.
                 </div>
               </div>
             </div>
-            <div>
-              <div className="flex items-center justify-between gap-4 px-4 py-3 rounded-md bg-muted/20 hover:bg-muted/30 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+
+            <div className="relative">
+              <div className="flex items-center justify-between gap-4 px-4 py-4 rounded-lg bg-gray-50 shadow-lg hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
                 <div className="grid gap-1">
-                  <div className="font-medium">Intern</div>
-                  <div className="text-sm text-muted-foreground">Tech Solutions</div>
-                  <div className="text-sm text-muted-foreground">2017 - 2018</div>
+                  <div className="font-semibold text-lg text-gray-800">Freelancer</div>
+                  <div className="text-sm text-gray-600">99 Freelas & Workana</div>
+                  <div className="text-sm text-gray-600">02/2023 - 01/2024</div>
                 </div>
               </div>
-              <div className="px-4 pt-4">
-                <div className="text-sm text-muted-foreground">
-                  Participated in a summer internship program, where I gained hands-on experience in web development.
-                  Worked on various projects, including building a company website and developing a mobile app
-                  prototype.
+              <div className="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 w-1 h-full bg-gray-300" />
+              <div className="absolute left-6 top-1/2 w-12 h-0.5 bg-gray-300" />
+              <div className="px-4 pt-2">
+                <div className="text-sm text-gray-600 bg-gray-200 p-4 rounded-lg">
+                  Participei de um programa de estágio de verão, onde ganhei experiência prática em desenvolvimento web.
+                  Trabalhou em vários projetos, incluindo a construção de um site da empresa e o desenvolvimento de um aplicativo móvel
+                  protótipo.
                 </div>
               </div>
             </div>
