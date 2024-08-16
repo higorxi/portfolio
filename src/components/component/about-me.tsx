@@ -10,7 +10,7 @@ export function AboutMe() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-44  text-[#FFFFFF]">
+    <section className="w-full py-12 md:py-24 lg:py-44 text-[#FFFFFF]">
       <div className="container grid grid-cols-1 gap-8 px-4 md:grid-cols-2 md:gap-12 lg:gap-16">
         <div className="flex items-center justify-center">
           <div className="relative h-[300px] w-[300px] overflow-hidden rounded-full border-4 border-[#C79D2A]">
@@ -26,8 +26,17 @@ export function AboutMe() {
         </div>
         <div className="flex flex-col items-start justify-center space-y-4">
           <div className="space-y-2">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Olá, Eu sou o Higor Giovane</h1>
-            <h2 className="text-2xl font-semibold text-[#C79D2A] sm:text-3xl">Desenvolvedor FullStack</h2>
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl" style={{
+                textShadow: `
+                  1px 1px 0 #000, 
+                  2px 2px 0 #000, 
+                  3px 3px 0 #000,
+                  4px 4px 0 #000
+                `
+              }}>Olá, Eu sou o Higor Giovane</h1>
+            <h2 className="text-2xl font-semibold text-[#C79D2A] sm:text-3xl transition-all duration-300 hover:text-[#FFD700]">
+              Desenvolvedor FullStack
+            </h2>
             <p className="text-[#FFFFFF] md:text-xl">
               Sou um desenvolvedor full stack apaixonado, focado em criar apps e sites que encantam e conectam pessoas.
               Adoro transformar ideias em soluções impactantes, desde interfaces intuitivas até sistemas robustos e

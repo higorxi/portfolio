@@ -3,7 +3,15 @@ export function Career() {
     <div className="w-full max-w-3xl mx-auto py-12 md:py-16 lg:py-28">
       <div className="space-y-8">
         <div className="space-y-4 text-center">
-          <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-[#C79D2A]">
+          <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-[#FFD700]" 
+          style={{
+                textShadow: `
+                  1px 1px 0 #000, 
+                  2px 2px 0 #000, 
+                  3px 3px 0 #000,
+                  4px 4px 0 #000
+                `
+              }}>
             História da minha carreira
           </h2>
           <p className="text-xl text-white max-w-[700px] mx-auto">

@@ -5,6 +5,8 @@ import { Footer } from '@/components/component/footer';
 import { Header } from '@/components/component/header';
 import { Project } from '@/components/component/project';
 import Marquee from 'react-fast-marquee';
+import { MarqueeTextOne } from '@/components/component/MarqueeTextOne';
+import { MarqueeTextTwo } from '@/components/component/MarqueeTextTwo';
 
 export default function Home() {
   return (
@@ -18,7 +20,9 @@ export default function Home() {
           <Career />
         </section>
         <Marquee className="marquee">
-          Capacitando a inovação por meio de código e criatividade.
+          <MarqueeTextOne />
+          <br />
+          <MarqueeTextTwo />
         </Marquee>
         <section id="projetos" className="gradient-background">
           <Project />
