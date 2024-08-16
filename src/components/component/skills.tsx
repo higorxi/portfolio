@@ -93,7 +93,7 @@ export function Skills() {
   )
 }
 
-function ChevronLeftIcon(props) {
+function ChevronLeftIcon(props: any) {
   return (
     <svg
       {...props}
@@ -113,7 +113,7 @@ function ChevronLeftIcon(props) {
 }
 
 
-function ChevronRightIcon(props) {
+function ChevronRightIcon(props: any) {
   return (
     <svg
       {...props}
@@ -133,7 +133,7 @@ function ChevronRightIcon(props) {
 }
 
 
-function CodepenIcon(props) {
+function CodepenIcon(props: any) {
   return (
     <svg
       {...props}
@@ -157,7 +157,7 @@ function CodepenIcon(props) {
 }
 
 
-function FastForwardIcon(props) {
+function FastForwardIcon(props: any) {
   return (
     <svg
       {...props}
@@ -178,7 +178,7 @@ function FastForwardIcon(props) {
 }
 
 
-function TypeIcon(props) {
+function TypeIcon(props: any) {
   return (
     <svg
       {...props}
@@ -200,7 +200,7 @@ function TypeIcon(props) {
 }
 
 
-function WindIcon(props) {
+function WindIcon(props: any) {
   return (
     <svg
       {...props}
