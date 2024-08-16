@@ -11,8 +11,7 @@ export function Contact() {
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Get in Touch</h2>
           <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl lg:text-base xl:text-xl">
-            Have a project in mind or just want to say hello? Fill out the form below and we'll get back to you as soon
-            as possible.
+          Tem um projeto em mente ou apenas quer dizer olá? Preencha o formulário abaixo e retornaremos o mais breve possível.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-8">
