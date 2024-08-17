@@ -45,7 +45,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10; 
+  z-index: -2; 
 }
 
 .gradient-background {
@@ -57,9 +57,11 @@ header {
   padding: 2rem 0;
 }
 
+
+
 .marquee {
-  background: #2242B3;
-  color: #fff;
+  background: #FFD700;
+  color: black;
   font-size: 1.2em;
   font-weight: bold;
   padding: 10px 20px;
@@ -92,6 +94,18 @@ header {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+}
+
+@keyframes policeLights {
+  0% { background-color: red; }
+  25% { background-color: blue; }
+  50% { background-color: red; }
+  75% { background-color: blue; }
+  100% { background-color: red; }
+}
+
+.police-lights {
+  animation: policeLights 5s infinite;
 }
 
 @layer base {

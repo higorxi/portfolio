@@ -81,15 +81,15 @@ export function Contact() {
             <div className="space-y-2">
               <h3 className="text-xl font-bold text-gray-800">Me acompanhe</h3>
               <div className="flex justify-left gap-4">
-                <Link href="#" className="text-blue-500 hover:text-blue-700" prefetch={false}>
+                <Link href="https://twitter.com/_Giiiovane" className="text-blue-500 hover:text-blue-700" prefetch={false}>
                   <TwitterIcon className="h-6 w-6" />
                   <span className="sr-only">Twitter</span>
                 </Link>
-                <Link href="#" className="text-blue-600 hover:text-blue-800" prefetch={false}>
+                <Link href="https://www.linkedin.com/in/higor-giovane-mt/" className="text-blue-600 hover:text-blue-800" prefetch={false}>
                   <LinkedinIcon className="h-6 w-6" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
-                <Link href="#" className="text-gray-800 hover:text-gray-600" prefetch={false}>
+                <Link href="https://github.com/higorxi" className="text-gray-800 hover:text-gray-600" prefetch={false}>
                   <FaGithub className="h-6 w-6" size={18} />
                   <span className="sr-only">GitHub</span>
                 </Link>

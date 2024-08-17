@@ -46,7 +46,7 @@ export function Footer() {
             <Link href="https://twitter.com/_Giiiovane" target="_blank" className="text-gray-300 hover:text-blue-400 transition-colors" prefetch={false}>
               <FaTwitter className="w-5 h-5" size={18} />
             </Link>
-            <Link href="https://github.com/your-github-username" target="_blank" className="text-gray-300 hover:text-gray-400 transition-colors" prefetch={false}>
+            <Link href="https://github.com/higorxi" target="_blank" className="text-gray-300 hover:text-gray-400 transition-colors" prefetch={false}>
               <FaGithub className="w-5 h-5" size={18} />
             </Link>
             <Link href="https://www.linkedin.com/in/higor-giovane-mt/" target="_blank" className="text-gray-300 hover:text-blue-600 transition-colors" prefetch={false}>

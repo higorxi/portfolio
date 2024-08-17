@@ -35,8 +35,15 @@ export function Project() {
         <div className="absolute inset-0 border border-gray-400 rounded-lg" />
         <div className="relative">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white">Projetos</h2>
-            <p className="text-white mt-2">Aqui estão alguns dos nossos projetos mais recentes e inovadores.</p>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white" style={{
+                textShadow: `
+                  1px 1px 0 #000, 
+                  2px 2px 0 #000, 
+                  3px 3px 0 #000,
+                  4px 4px 0 #000
+                `
+              }}>Projetos</h2>
+            <p className="text-white mt-2 text-lg">Aqui estão alguns dos nossos projetos mais recentes e inovadores.</p>
           </div>
 
           <div className="relative">

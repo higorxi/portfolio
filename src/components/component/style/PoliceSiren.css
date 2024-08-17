@@ -1,0 +1,36 @@
+@keyframes redLight {
+  0%, 100% { opacity: 1; background-color: red; }
+  50% { opacity: 0.3; background-color: red; }
+}
+
+@keyframes blueLight {
+  0%, 100% { opacity: 1; background-color: blue; }
+  50% { opacity: 0.3; background-color: blue; }
+}
+
+.police-siren {
+  position: relative;
+  z-index: 0; 
+  pointer-events: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light {
+  width: 2rem; 
+  height: 2rem;
+  border-radius: 50%; 
+  opacity: 1;
+  filter: blur(8px); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+.light.red {
+  animation: redLight 1.5s infinite; 
+}
+
+.light.blue {
+  animation: blueLight 1s infinite; 
+  margin-left: 10px; 
+}
