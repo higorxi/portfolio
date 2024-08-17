@@ -41,7 +41,7 @@
     {
       title: 'Aplicativo de parcelamento de compras',
       description: 'A third brief description of the project goes here.',
-      imageUrl: '../assets/projects/woovi.gif',
+      imageUrl: '../assets/projects/Woovi.gif',
       isVertical: true,
       technologies: [
         { name: 'Flutter', description: 'An open-source UI software development toolkit', icon: 'flutter' },
