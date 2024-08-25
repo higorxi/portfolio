@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Modal from '../component/modal';
+import { FaGithub } from 'react-icons/fa';
+import { LinkedinIcon } from 'lucide-react';
 
 export function AboutMe() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -13,27 +15,41 @@ export function AboutMe() {
     <section className="w-full py-12 md:py-24 lg:py-44 text-[#FFFFFF]">
       <div className="container grid grid-cols-1 gap-8 px-4 md:grid-cols-2 md:gap-12 lg:gap-16">
         <div className="flex items-center justify-center">
-          <div className="relative h-[300px] w-[300px] overflow-hidden rounded-full border-4 border-[#C79D2A]">
+          <div className="relative profile-image-container">
+            <div className="absolute inset-0 neon-border"></div>
             <img
-              src="/placeholder.svg"
+              src="../assets/profile/Foto-Higor.png"
               alt="Profile Picture"
-              width={300}
-              height={300}
-              className="h-full w-full object-cover"
-              style={{ aspectRatio: '300/300', objectFit: 'cover' }}
+              className="profile-image"
             />
+            <div className="overlay"></div>
+            <div className="icons-container">
+              <Link href="https://www.linkedin.com/in/higor-giovane-mt/" target='_blank' className="text-blue-600 hover:text-white" prefetch={false}>
+                <LinkedinIcon className="h-6 w-6" size={22} />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
+              <Link href="https://github.com/higorxi" target='_blank' className="text-gray-800 hover:text-white" prefetch={false}>
+                <FaGithub className="h-6 w-6" size={22} />
+                <span className="sr-only">GitHub</span>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-start justify-center space-y-4">
           <div className="space-y-2">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl" style={{
+            <h1
+              className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl"
+              style={{
                 textShadow: `
                   1px 1px 0 #000, 
                   2px 2px 0 #000, 
                   3px 3px 0 #000,
                   4px 4px 0 #000
-                `
-              }}>Olá, Eu sou o Higor Giovane</h1>
+                `,
+              }}
+            >
+              Olá, Eu sou o Higor Giovane
+            </h1>
             <h2 className="text-2xl font-semibold text-[#C79D2A] sm:text-3xl transition-all duration-300 hover:text-[#FFD700]">
               Desenvolvedor FullStack
             </h2>
@@ -93,9 +109,10 @@ function BriefcaseIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="h-6 w-6"
     >
-      <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      <rect width="20" height="14" x="2" y="6" rx="2" />
+      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+      <path d="M16 3h-8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z" />
     </svg>
   );
 }
@@ -113,8 +130,9 @@ function MapPinIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="h-6 w-6"
     >
-      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+      <path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z" />
       <circle cx="12" cy="10" r="3" />
     </svg>
   );

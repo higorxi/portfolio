@@ -1,95 +1,102 @@
- const projects = [
-    {
-      title: 'UCash',
-      description: 'Aplicativo inovador focado especificamente em conversão de crédito.',
-      imageUrl: '../assets/projects/UCash.gif',
-      technologies: [
-        { name: 'React Native', description: 'A JavaScript library for building user interfaces', icon: 'reactjs' },
-        { name: 'Expo', description: 'A React framework for production', icon: 'expo' },
-        { name: 'TypeScript', description: 'A React framework for production', icon: 'typescript' },
-        { name: 'Styled Components', description: 'A utility-first CSS framework', icon: 'css' },
-        { name: 'Node.js', description: 'A utility-first CSS framework', icon: 'nodejs' },
-        { name: 'Express', description: 'A utility-first CSS framework', icon: 'express' },
-        { name: 'Azure', description: 'A utility-first CSS framework', icon: 'azure' },
-        { name: 'Docker', description: 'A utility-first CSS framework', icon: 'docker' },
-        { name: 'Figma', description: 'A utility-first CSS framework', icon: 'figma' },
-        { name: 'Git', description: 'A utility-first CSS framework', icon: 'git' },
-      ],
-      githubUrl: '#',
-    },
-    {
-      title: 'Portal Consulta Brasil',
-      description: 'Another brief description of the project goes here.',
-      imageUrl: '../assets/projects/ConsultaBrasil.gif',
-      technologies: [
-        { name: 'Node.js', description: "A JavaScript runtime built on Chrome's V8 JavaScript engine", icon: 'nodejs' },
-        { name: 'Express', description: 'A minimal and flexible Node.js web application framework', icon: 'express' },
-        { name: 'MongoDB', description: 'A NoSQL database for modern applications', icon: 'mongodb' },
-      ],
-      githubUrl: '#',
-    },
-    {
-      title: 'Cidade Alta API & WEB',
-      description: 'A third brief description of the project goes here.',
-      imageUrl: '../assets/projects/CidadeAlta.gif',
-      technologies: [
-        { name: 'Flutter', description: 'An open-source UI software development toolkit', icon: 'flutter' },
-        { name: 'Firebase', description: 'A platform for creating mobile and web applications', icon: 'firebase' },
-      ],
-      githubUrl: '#',
-    },
-    {
-      title: 'Aplicativo de parcelamento de compras',
-      description: 'A third brief description of the project goes here.',
-      imageUrl: '../assets/projects/Woovi.gif',
-      isVertical: true,
-      technologies: [
-        { name: 'Flutter', description: 'An open-source UI software development toolkit', icon: 'flutter' },
-        { name: 'Firebase', description: 'A platform for creating mobile and web applications', icon: 'firebase' },
-      ],
-      githubUrl: '#',
-    },
-    {
-      title: "API's",
-      description: 'A third brief description of the project goes here.',
-      imageUrl: '../assets/projects/API.gif',
-      technologies: [
-        { name: 'Flutter', description: 'An open-source UI software development toolkit', icon: 'flutter' },
-        { name: 'Firebase', description: 'A platform for creating mobile and web applications', icon: 'firebase' },
-      ],
-      githubUrl: '#',
-    },
-    {
-      title: "Extensão WhatsApp",
-      description: 'A third brief description of the project goes here.',
-      imageUrl: '../assets/projects/ExtensaoZap.jpg',
-      technologies: [
-        { name: 'Flutter', description: 'An open-source UI software development toolkit', icon: 'flutter' },
-        { name: 'Firebase', description: 'A platform for creating mobile and web applications', icon: 'firebase' },
-      ],
-      githubUrl: '#',
-    },
-    {
-      title: "Extensão LowRAM",
-      description: 'A third brief description of the project goes here.',
-      imageUrl: '/placeholder.svg',
-      technologies: [
-        { name: 'Flutter', description: 'An open-source UI software development toolkit', icon: 'flutter' },
-        { name: 'Firebase', description: 'A platform for creating mobile and web applications', icon: 'firebase' },
-      ],
-      githubUrl: '#',
-    },
-    {
-      title: "Aplicativo para localizar CEP",
-      description: 'A third brief description of the project goes here.',
-      imageUrl: '/placeholder.svg',
-      technologies: [
-        { name: 'Flutter', description: 'An open-source UI software development toolkit', icon: 'flutter' },
-        { name: 'Firebase', description: 'A platform for creating mobile and web applications', icon: 'firebase' },
-      ],
-      githubUrl: '#',
-    },
-    
-  ];
+const projects = [
+  {
+    title: 'UCash',
+    description: 'Aplicativo inovador focado especificamente em conversão de crédito.',
+    imageUrl: '../assets/projects/UCash.gif',
+    technologies: [
+      { name: 'React Native', description: 'Uma biblioteca JavaScript para construir interfaces de usuário', icon: 'reactjs' },
+      { name: 'Expo', description: 'Uma plataforma para construir aplicativos React Native', icon: 'expo' },
+      { name: 'TypeScript', description: 'Uma linguagem que adiciona tipagem estática ao JavaScript', icon: 'typescript' },
+      { name: 'Styled Components', description: 'Uma biblioteca para estilização de componentes em React', icon: 'styledcomponents' },
+      { name: 'Node.js', description: 'Um ambiente de execução para JavaScript no lado do servidor', icon: 'nodejs' },
+      { name: 'Express', description: 'Um framework para construir aplicativos web e APIs com Node.js', icon: 'express' },
+      { name: 'Azure', description: 'Uma plataforma de nuvem da Microsoft para desenvolvimento e serviços', icon: 'azure' },
+      { name: 'Docker', description: 'Uma plataforma para desenvolver, enviar e executar aplicativos em contêineres', icon: 'docker' },
+      { name: 'Figma', description: 'Uma ferramenta de design colaborativo para interfaces e protótipos', icon: 'figma' },
+      { name: 'Git', description: 'Um sistema de controle de versão distribuído para rastrear mudanças no código-fonte', icon: 'git' },
+    ],
+    githubUrl: '#',
+  },
+  {
+    title: 'Portal Consulta Brasil',
+    description: 'Sistema de consulta e integração com a base de dados do Consulta Brasil.',
+    imageUrl: '../assets/projects/ConsultaBrasil.gif',
+    technologies: [
+      { name: 'Node.js', description: "Um runtime JavaScript baseado no motor V8 do Chrome", icon: 'nodejs' },
+      { name: 'Nest.js', description: 'Um framework web Node.js minimalista e flexível', icon: 'nestjs' },
+      { name: 'PostgreSQL', description: 'Um banco de dados relacional de código aberto', icon: 'postgresql' },
+      { name: 'Azure', description: 'Uma plataforma de nuvem da Microsoft para desenvolvimento e serviços', icon: 'azure' },
+      { name: 'Webhook', description: 'Uma técnica para permitir comunicação entre sistemas', icon: 'tRPC' },
+      { name: 'EzPayBank', description: 'Um serviço para processamento de pagamentos', icon: 'payment' },
+    ],
+    githubUrl: '#',
+  },
+  {
+    title: 'Cidade Alta API & WEB',
+    description: 'API e interface web para o projeto Cidade Alta.',
+    imageUrl: '../assets/projects/CidadeAlta.gif',
+    technologies: [
+      { name: 'React', description: 'Uma biblioteca de JavaScript para construir interfaces de usuário', icon: 'reactjs' },
+      { name: 'TypeScript', description: 'Uma linguagem que adiciona tipagem estática ao JavaScript', icon: 'typescript' },
+      { name: 'Nest.js', description: 'Um framework web Node.js minimalista e flexível', icon: 'nestjs' },
+      { name: 'PostgreSQL', description: 'Um banco de dados relacional de código aberto', icon: 'postgresql' },
+      { name: 'Azure', description: 'Uma plataforma de nuvem da Microsoft para desenvolvimento e serviços', icon: 'azure' },
+    ],
+    githubUrl: '#',
+  },
+  {
+    title: 'Aplicativo de parcelamento de compras',
+    description: 'Aplicativo para parcelamento de compras com integração de pagamento.',
+    imageUrl: '../assets/projects/Woovi.gif',
+    isVertical: true,
+    technologies: [
+      { name: 'React Native', description: 'Uma biblioteca JavaScript para construir interfaces de usuário', icon: 'reactjs' },
+      { name: 'Expo', description: 'Uma plataforma para construir aplicativos React Native', icon: 'expo' },
+      { name: 'TypeScript', description: 'Uma linguagem que adiciona tipagem estática ao JavaScript', icon: 'typescript' },
+    ],
+    githubUrl: '#',
+  },
+  {
+    title: "API's",
+    description: 'Conjunto de APIs para integração e serviços diversos.',
+    imageUrl: '../assets/projects/API.gif',
+    technologies: [
+      { name: 'Node.js', description: 'Um runtime JavaScript baseado no motor V8 do Chrome', icon: 'nodejs' },
+      { name: 'Express', description: 'Um framework para construir aplicativos web e APIs com Node.js', icon: 'express' },
+      { name: 'TypeScript', description: 'Uma linguagem que adiciona tipagem estática ao JavaScript', icon: 'typescript' },
+    ],
+    githubUrl: '#',
+  },
+  {
+    title: "Extensão WhatsApp",
+    description: 'Extensão para integração e automação com o WhatsApp.',
+    imageUrl: '../assets/projects/ExtensaoZap.jpg',
+    technologies: [
+      { name: 'JavaScript', description: 'Uma linguagem de programação para desenvolvimento web', icon: 'javascript' },
+      { name: 'Chrome', description: 'O navegador Google Chrome', icon: 'chrome' },
+    ],
+    githubUrl: '#',
+  },
+  {
+    title: "Extensão LowRAM",
+    description: 'Extensão para otimização de recursos no navegador.',
+    imageUrl: '/placeholder.svg',
+    technologies: [
+      { name: 'JavaScript', description: 'Uma linguagem de programação para desenvolvimento web', icon: 'javascript' },
+      { name: 'Chrome', description: 'O navegador Google Chrome', icon: 'chrome' },
+    ],
+    githubUrl: '#',
+  },
+  {
+    title: "Aplicativo para localizar CEP",
+    description: 'Aplicativo para pesquisa de CEP e localização de endereços.',
+    imageUrl: '/placeholder.svg',
+    technologies: [
+      { name: 'Flutter', description: 'Um toolkit de UI para criar aplicativos nativos', icon: 'flutter' },
+      { name: 'Firebase', description: 'Uma plataforma para desenvolvimento de aplicativos móveis e web', icon: 'firebase' },
+    ],
+    githubUrl: '#',
+  },
+];
 
-  export default projects;
+export default projects;
