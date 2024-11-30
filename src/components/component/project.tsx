@@ -1,10 +1,17 @@
-'use client';
-import { useState } from 'react';
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import TechnologiesModal from '../component/technologiesModal';
-import projects from '../../projects/projects'
+"use client";
+import { useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import TechnologiesModal from "../component/technologiesModal";
+import projects from "../../projects/projects";
+import { Chrome, Settings } from "lucide-react";
 
 interface Technology {
   name: string;
@@ -15,9 +22,12 @@ interface Technology {
 
 export function Project() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [modalContent, setModalContent] = useState<{ technologies: Technology[]; description: string }>({
+  const [modalContent, setModalContent] = useState<{
+    technologies: Technology[];
+    description: string;
+  }>({
     technologies: [],
-    description: '',
+    description: "",
   });
 
   const openModal = (technologies: Technology[], description: string) => {
@@ -26,8 +36,6 @@ export function Project() {
   };
 
   const closeModal = () => setIsModalOpen(false);
-  
-
 
   return (
     <div className="w-full max-w-6xl mx-auto py-12 md:py-16">
@@ -35,15 +43,26 @@ export function Project() {
         <div className="absolute inset-0 border border-gray-400 rounded-lg" />
         <div className="relative">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white" style={{
+            <h2
+              className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white"
+              style={{
                 textShadow: `
                   1px 1px 0 #000, 
                   2px 2px 0 #000, 
                   3px 3px 0 #000,
                   4px 4px 0 #000
-                `
-              }}>Projetos</h2>
-            <p className="text-white mt-2 text-lg">Aqui estão alguns dos nossos projetos mais recentes e inovadores.</p>
+                `,
+              }}
+            >
+              Projetos
+            </h2>
+            <p className="text-white mt-2 text-lg">
+              Aqui estão alguns dos meus projetos
+            </p>
+            <p className="text-white mt-2 text-lg">
+              incluindo aqueles que desenvolvi completamente e outros nos quais
+              contribui para construção ou manutenção.
+            </p>
           </div>
 
           <div className="relative">
@@ -58,28 +77,53 @@ export function Project() {
                         width={500}
                         height={300}
                         className="w-full md:w-1/2 h-64 md:h-auto object-cover"
-                        style={{ aspectRatio: '500/300', objectFit: 'cover' }}
+                        style={{ aspectRatio: "500/300", objectFit: "cover" }}
                       />
                       <div className="p-6 md:p-8 flex flex-col gap-4">
                         <div>
-                          <h3 className="text-2xl font-bold">{project.title}</h3>
-                          <p className="text-muted-foreground">{project.description}</p>
+                          <h3 className="text-2xl font-bold">
+                            {project.title}
+                          </h3>
+                          <p className="text-muted-foreground">
+                            {project.description}
+                          </p>
                         </div>
-                        <div className="flex items-center gap-4">
-                          <Button
-                            variant="outline"
-                            onClick={() => openModal(project.technologies, project.description)}
-                          >
-                            Tecnologias
-                          </Button>
-                          <Link
-                            href={project.githubUrl}
-                            className="inline-flex items-center gap-2 text-white-600 hover:text-black"
-                            prefetch={false}
-                          >
-                            <GithubIcon className="w-5 h-5" />
-                            Visualizar no GitHub
-                          </Link>
+                        <div className="flex flex-col items-center gap-4">
+                          <div className="flex items-center gap-4">
+                            <Button
+                              variant="outline"
+                              onClick={() =>
+                                openModal(
+                                  project.technologies,
+                                  project.description
+                                )
+                              }
+                            >
+                              <Settings className="w-5 h-5 mr-2" />
+                              Tecnologias
+                            </Button>
+                            <Link
+                              href={project.githubUrl}
+                              className="inline-flex items-center gap-2 text-white-600 hover:text-black"
+                              prefetch={false}
+                            >
+                              <GithubIcon className="w-5 h-5" />
+                              Visualizar no GitHub
+                            </Link>
+                          </div>
+                          {project.url ? (
+                            <div className="border-2 p-2 rounded-lg">
+                              <Link
+                                href={project.url}
+                                className="inline-flex items-center gap-2 text-white-600 hover:text-black"
+                                prefetch={false}
+                                target="_blank"
+                              >
+                                <Chrome className="w-5 h-5" />
+                                LIVE
+                              </Link>
+                            </div>
+                          ) : null}
                         </div>
                       </div>
                       <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10" />

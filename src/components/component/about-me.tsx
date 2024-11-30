@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Modal from '../component/modal';
 import { FaGithub } from 'react-icons/fa';
 import { LinkedinIcon } from 'lucide-react';
+import Image from 'next/image';
+import ImageProfile from "../../../public/assets/profile/Foto-Higor.png"
+import ImageProfileIA from "../../../public/assets/profile/Foto-IA.jpg"
 
 export function AboutMe() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -15,12 +18,13 @@ export function AboutMe() {
     <section className="w-full py-12 md:py-24 lg:py-44 text-[#FFFFFF]">
       <div className="container grid grid-cols-1 gap-8 px-4 md:grid-cols-2 md:gap-12 lg:gap-16">
         <div className="flex items-center justify-center">
-          <div className="relative profile-image-container">
-            <div className="absolute inset-0 neon-border"></div>
-            <img
-              src="../assets/profile/Foto-Higor.png"
+          <div className="relative profile-image-container ">
+            <Image
+              src={ImageProfileIA}
               alt="Profile Picture"
               className="profile-image"
+              width={400}
+              height={200}
             />
             <div className="overlay"></div>
             <div className="icons-container">
@@ -48,21 +52,20 @@ export function AboutMe() {
                 `,
               }}
             >
-              Olá, Eu sou o Higor Giovane
+              Opa, Higor Giovane aqui!
             </h1>
             <h2 className="text-2xl font-semibold text-[#C79D2A] sm:text-3xl transition-all duration-300 hover:text-[#FFD700]">
               Desenvolvedor FullStack
             </h2>
             <p className="text-[#FFFFFF] md:text-xl">
               Sou um desenvolvedor full stack apaixonado, focado em criar apps e sites que encantam e conectam pessoas.
-              Adoro transformar ideias em soluções impactantes, desde interfaces intuitivas até sistemas robustos e
-              escaláveis.
+              Apaixonado por criar soluções escaláveis e de grande impacto.
             </p>
           </div>
           <div className="flex flex-col gap-2 sm:flex-row">
             <button
               onClick={openModal}
-              className="inline-flex h-10 items-center justify-center rounded-md bg-[#C79D2A] px-6 text-sm font-medium text-[#001047] shadow transition-colors hover:bg-[#FFD700] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C79D2A] disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-[#FFD700] px-6 text-sm font-medium text-[#001047] shadow transition-colors hover:bg-[#C79D2A] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C79D2A] disabled:pointer-events-none disabled:opacity-50"
             >
               Ver Currículo
             </button>

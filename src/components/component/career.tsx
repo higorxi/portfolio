@@ -30,7 +30,6 @@ export function Career() {
                 </div>
               </div>
               <div className="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 w-1 h-full bg-gray-300" />
-              <div className="absolute left-6 top-1/2 w-12 h-0.5 bg-gray-300" />
               <div className="px-4 pt-2">
                 <div className="text-sm text-gray-600 bg-gray-200 p-4 rounded-lg">
                   ● Promovido a Desenvolvedor FullStack Pleno, assumindo a responsabilidade de liderar a recriação do
@@ -55,7 +54,6 @@ export function Career() {
                 </div>
               </div>
               <div className="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 w-1 h-full bg-gray-300" />
-              <div className="absolute left-6 top-1/2 w-12 h-0.5 bg-gray-300" />
               <div className="px-4 pt-2">
                 <div className="text-sm text-gray-600 bg-gray-200 p-4 rounded-lg">
                   ● Participei da criação e manutenção de uma aplicação mobile de conversão de crédito, envolvendo
@@ -80,7 +78,6 @@ export function Career() {
                 </div>
               </div>
               <div className="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 w-1 h-full bg-gray-300" />
-              <div className="absolute left-6 top-1/2 w-12 h-0.5 bg-gray-300" />
               <div className="px-4 pt-2">
                 <div className="text-sm text-gray-600 bg-gray-200 p-4 rounded-lg">
                   ● Atuando como Front-end, utilizando React.js para a produção de demandas internas da faculdade,
@@ -101,7 +98,6 @@ export function Career() {
                 </div>
               </div>
               <div className="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 w-1 h-full bg-gray-300" />
-              <div className="absolute left-6 top-1/2 w-12 h-0.5 bg-gray-300" />
               <div className="px-4 pt-2">
                 <div className="text-sm text-gray-600 bg-gray-200 p-4 rounded-lg">
                   ● Atuando no desenvolvimento de Landing Pages com Html, Css e Js, apliando o conhecimento e
