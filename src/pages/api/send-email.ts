@@ -1,5 +1,7 @@
 import nodemailer from 'nodemailer';
 import { NextApiRequest, NextApiResponse } from 'next';
+import validator from 'validator';
+import escapeHtml from 'escape-html';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method !== 'POST') {
@@ -8,7 +10,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const { name, email, message } = req.body as { name: string; email: string; message: string };
+    let { name, email, message } = req.body as { name: string; email: string; message: string };
+
+    if (!validator.isEmail(email)) {
+      res.status(400).json({ message: 'Email inválido' });
+      return;
+    }
+
+    name = validator.escape(name.trim());
+    email = validator.normalizeEmail(email.trim()) as string;
+    message = escapeHtml(message.trim());
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -35,7 +46,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     res.status(200).json({ message: 'Email enviado com sucesso!' });
   } catch (error) {
-    console.error('Erro ao enviar email:', error);
-    res.status(500).json({ message: 'Erro ao enviar email' });
-  }
+    if (error instanceof Error) {
+      console.error('Erro ao enviar email:', error.message);
+      res.status(500).json({ message: 'Erro ao enviar email' });
+    } else {
+      console.error('Erro desconhecido:', error);
+      res.status(500).json({ message: 'Erro desconhecido ao enviar email' });
+    }
+}
 }
