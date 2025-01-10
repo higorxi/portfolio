@@ -64,7 +64,7 @@ export function Footer() {
               contatohigordev@gmail.com
             </Link>
             <Link href="#" className="text-gray-300 hover:text-white hover:underline transition-colors" prefetch={false}>
-              +55 (62) 98519-4415
+              +55 (62) 98205-7151
             </Link>
             <Link href="#contato" className="text-gray-300 hover:text-white hover:underline transition-colors" prefetch={false}>
               Formulário de Contato

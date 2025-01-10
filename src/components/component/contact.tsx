@@ -1,24 +1,74 @@
+"use client"
+
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { FaGithub, FaWhatsapp } from 'react-icons/fa';
+import { useState, FormEvent } from 'react';
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<'success' | 'error' | null>(null);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-600"
-              style={{
-                textShadow: `
-                  1px 1px 0 #000, 
-                  2px 2px 0 #000, 
-                  3px 3px 0 #000,
-                  4px 4px 0 #000
-                `
-              }}>
+          <h2 
+            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-600"
+            style={{
+              textShadow: `
+                1px 1px 0 #000, 
+                2px 2px 0 #000, 
+                3px 3px 0 #000,
+                4px 4px 0 #000
+              `
+            }}
+          >
             Entre em contato
           </h2>
           <p className="max-w-[700px] mx-auto text-white md:text-xl lg:text-base xl:text-xl">
@@ -27,7 +77,7 @@ export function Contact() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-8">
-          <form className="w-full max-w-md space-y-6 bg-white p-6 rounded-lg shadow-md">
+          <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6 bg-white p-6 rounded-lg shadow-md">
             <div className="grid gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-gray-800">
@@ -35,7 +85,11 @@ export function Contact() {
                 </Label>
                 <Input
                   id="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Escreva seu nome"
+                  required
+                  disabled={loading}
                   className="border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
                 />
               </div>
@@ -46,7 +100,11 @@ export function Contact() {
                 <Input
                   id="email"
                   type="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Escreva seu email"
+                  required
+                  disabled={loading}
                   className="border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
                 />
               </div>
@@ -56,25 +114,43 @@ export function Contact() {
                 </Label>
                 <Textarea
                   id="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Escreva sua mensagem"
+                  required
+                  disabled={loading}
                   rows={5}
                   className="border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
                 />
               </div>
             </div>
+            
+            {status === 'success' && (
+              <p className="text-green-600 text-sm font-medium">
+                Mensagem enviada com sucesso! Retornaremos em breve.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-600 text-sm font-medium">
+                Erro ao enviar mensagem. Por favor, tente novamente.
+              </p>
+            )}
+            
             <Button
               type="submit"
-              className="w-full bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              disabled={loading}
+              className="w-full bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
             >
-              Enviar
+              {loading ? 'Enviando...' : 'Enviar'}
             </Button>
           </form>
+
           <div className="w-full max-w-md space-y-8 bg-white p-6 rounded-lg shadow-md">
             <div className="space-y-2">
               <h3 className="text-xl font-bold text-gray-800">Informação De Contato</h3>
               <div className="space-y-1 text-gray-600">
                 <p>Anápolis, Goiás - BR</p>
-                <p>Telefone: +55 (62) 98519-4415</p>
+                <p>Telefone: +55 (62) 98205-7151</p>
                 <p>Email: contatohigordev@gmail.com</p>
               </div>
             </div>
